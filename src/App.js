@@ -2,19 +2,27 @@ import React from 'react';
 import { GoogleLogin } from 'react-google-login';
 import { GoogleLogout } from 'react-google-login';
 import { useGoogleLogin } from 'react-google-login'
+import {
+  BrowserRouter as Router,
+  Link,
+  Route
+} from "react-router-dom";
 import logo from './logo.svg';
 import './App.css';
 
-
 const responseGoogle = (response) => {
+  
   //This callback gets called on a successfull login
   console.log(response);
   console.log("Logged In!");
+  
 }
 const logout = (response) => {
   console.log(response);
   console.log("logged out");
+  
 }
+
 function App() {
   return (
     <div className="App">
