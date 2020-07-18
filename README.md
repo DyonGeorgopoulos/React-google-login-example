@@ -19,7 +19,7 @@ const responseGoogle = (response) => {
   console.log(response);
 }
 # Put this in your render function
- <GoogleLogin
+ ```<GoogleLogin
       clientId="1051194441048-4vdhlle1jsqg6jcfes3jgof8uo1sa2rn.apps.googleusercontent.com"
       buttonText="Login"
       onSuccess={responseGoogle}
@@ -28,6 +28,7 @@ const responseGoogle = (response) => {
       cookiePolicy={'single_host_origin'}
     />
     {document.getElementById('googleButton')}
+```
 # Run NPM Start
 
 ## Available Scripts
