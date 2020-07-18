@@ -1,5 +1,35 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to set up a google developer Client ID
+1. go to https://console.developers.google.com
+2. log in
+3. Press Enable API's and Services
+4. Enable the Google Analytics API, google+ Api, google+ domains, and google+ Hangouts Api
+5. press the hamburger menu in the top left and go to Api's and services -> credentials
+6. Press create credentials at the top of the screen
+7. Create a new OAUTH Client ID
+8. Choose Web Application
+9. Go down to Authorized Javascript origins and set your url's. For local deployment, set ```http://localhost``` & ```http://localhost:<portnum>```
+
+## How to use the client ID in your react project
+```npm install react-google-login```
+```import { GoogleLogin } from 'react-google-login';```
+# Put this above your render function in App.js
+const responseGoogle = (response) => {
+  console.log(response);
+}
+# Put this in your render function
+ <GoogleLogin
+      clientId="1051194441048-4vdhlle1jsqg6jcfes3jgof8uo1sa2rn.apps.googleusercontent.com"
+      buttonText="Login"
+      onSuccess={responseGoogle}
+      isSignedIn={true}
+      onFailure={responseGoogle}
+      cookiePolicy={'single_host_origin'}
+    />
+    {document.getElementById('googleButton')}
+# Run NPM Start
+
 ## Available Scripts
 
 In the project directory, you can run:
